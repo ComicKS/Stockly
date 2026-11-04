@@ -1,1 +1,240 @@
-/* Taruh CSS Custom Disini */
+﻿/* Stockly custom theme */
+:root {
+    --stockly-bg: #f4f5f7;
+    --stockly-panel: #ffffff;
+    --stockly-border: #dfe3e8;
+    --stockly-sidebar: #f2f4f6;
+    --stockly-sidebar-text: #334155;
+    --stockly-head: #0f4c5c;
+    --stockly-link: #1a6e8d;
+    --stockly-success: #2d7d66;
+    --stockly-warning: #e6b14e;
+    --stockly-danger: #d54d54;
+    --stockly-info: #2a7ab6;
+}
+
+body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: var(--stockly-bg);
+    color: #1f2a37;
+}
+
+.app-wrapper {
+    min-height: 100vh;
+}
+
+.app-main {
+    background: var(--stockly-bg);
+}
+
+.app-content-header {
+    background: transparent;
+    padding-top: 1rem;
+}
+
+.brand-image {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(15,76,92,0.12);
+}
+
+.app-sidebar {
+    background: var(--stockly-sidebar);
+    border-right: 1px solid var(--stockly-border);
+}
+
+.sidebar-brand {
+    padding: 0.9rem 1rem 0.75rem;
+    border-bottom: 1px solid var(--stockly-border);
+    background: rgba(255,255,255,0.18);
+}
+
+.brand-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: var(--stockly-head);
+    text-decoration: none;
+}
+
+.brand-text {
+    letter-spacing: 0.02em;
+}
+
+.sidebar-menu {
+    padding-top: 0.5rem;
+}
+
+.nav-header {
+    color: #7a8590;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1rem 1rem 0.4rem;
+    font-weight: 700;
+}
+
+.nav-sidebar .nav-link,
+.nav-item .nav-link,
+.sidebar-menu .nav-link {
+    color: var(--stockly-sidebar-text);
+    border-radius: 0.5rem;
+    margin: 0 0.5rem;
+    padding: 0.72rem 0.9rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-menu .nav-link:hover,
+.sidebar-menu .nav-link:focus,
+.sidebar-menu .nav-link.active {
+    background: rgba(26, 110, 141, 0.08);
+    color: var(--stockly-head);
+}
+
+.sidebar-menu .nav-link.active {
+    box-shadow: inset 0 0 0 1px rgba(26, 110, 141, 0.12);
+}
+
+.nav-icon {
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+
+.small-box {
+    border-radius: 0.75rem;
+    border: 1px solid var(--stockly-border);
+    box-shadow: none;
+    background: var(--stockly-panel);
+}
+
+.small-box .inner {
+    padding: 1rem 1.1rem;
+}
+
+.small-box h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.small-box p {
+    margin-bottom: 0;
+    font-weight: 600;
+    color: #42515d;
+}
+
+.card {
+    border-radius: 0.8rem;
+    border: 1px solid var(--stockly-border);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    background: var(--stockly-panel);
+}
+
+.card-header {
+    background: #fafbfc;
+    border-bottom: 1px solid var(--stockly-border);
+    padding: 0.85rem 1rem;
+}
+
+.card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--stockly-head);
+}
+
+.table > :not(caption) > * > * {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.table thead th {
+    color: #334155;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--stockly-border);
+}
+
+.form-control, .form-select, .form-check-input {
+    border-radius: 0.55rem;
+    border-color: var(--stockly-border);
+    box-shadow: none;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: rgba(26,110,141,0.6);
+    box-shadow: 0 0 0 0.2rem rgba(26,110,141,0.08);
+}
+
+.btn {
+    border-radius: 0.55rem;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--stockly-head);
+    border-color: var(--stockly-head);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--stockly-link);
+    border-color: var(--stockly-link);
+}
+
+.inner h3, .inner p {
+    color: white;
+}
+.breadcrumb {
+    margin-bottom: 0;
+}
+
+.alert {
+    border-radius: 0.7rem;
+}
+
+.badge {
+    border-radius: 999px;
+    padding: 0.42em 0.7em;
+    font-weight: 600;
+}
+
+.bg-primary-subtle,
+.bg-primary {
+    background-color: var(--stockly-head) !important;
+}
+
+.bg-info-subtle,
+.bg-info {
+    background-color: var(--stockly-info) !important;
+}
+
+.bg-success-subtle,
+.bg-success {
+    background-color: var(--stockly-success) !important;
+}
+
+.bg-warning-subtle,
+.bg-warning {
+    background-color: var(--stockly-warning) !important;
+}
+
+.bg-danger-subtle,
+.bg-danger {
+    background-color: var(--stockly-danger) !important;
+}
+
+@media (max-width: 991.98px) {
+    .app-sidebar {
+        border-right: none;
+    }
+
+    .brand-link {
+        font-size: 1rem;
+    }
+}

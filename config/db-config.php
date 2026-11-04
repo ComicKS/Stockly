@@ -1,36 +1,37 @@
 <?php
 
 class Database {
+    private $db_host = "localhost";
+    private $db_user = "root";
+    private $db_pass = "";
+    private $db_name = "db_simplecrud";
+    public $conn;
 
-    // Konfigurasi database dapat dilihat di SQLYog atau HeidiSQL
-    private $db_host = "localhost"; // database host
-    private $db_user = "root"; // database username
-    private $db_pass = "root"; // database password
-    private $db_name = "db_simplecrud"; // database name
-    public $conn; // database connection
-
-    // Konstruktor untuk inisialisasi koneksi database
-    public function __construct(){
-        // Memanggil method untuk membuat koneksi database
+    public function __construct() {
         $this->getConnection();
     }
-    
-    // Method untuk membuat koneksi database
-    public function getConnection(){
-        try{
-            // Membuat koneksi database menggunakan mysqli
+
+    public function getConnection() {
+        try {
+            mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
             $this->conn = new mysqli($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
-            // Cek koneksi database
-            if ($this->conn->connect_error) {
-                // Melemparkan exception jika koneksi gagal
-                throw new Exception("Connection failed: " . $this->conn->connect_error);
-            }
-        } catch(Exception $e){
-            // Menangani exception dan menampilkan pesan error
-            die("Connection error: " . $e->getMessage());
+            $this->conn->set_charset('utf8mb4');
+        } catch (Exception $e) {
+            die('Connection error: ' . $e->getMessage());
         }
     }
 
+    public function beginTransaction() {
+        return $this->conn->begin_transaction();
+    }
+
+    public function commit() {
+        return $this->conn->commit();
+    }
+
+    public function rollback() {
+        return $this->conn->rollback();
+    }
 }
 
 ?>

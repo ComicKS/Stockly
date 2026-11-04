@@ -1,7 +1,5 @@
 <footer class="app-footer">
-
     <strong>
-        Copyright &copy; 2025 Aria Developer Untuk Keperluan Edukasi.
+        Stockly — IDB Bali Campus Borrowing System &copy; 2025
     </strong>
-
 </footer>
