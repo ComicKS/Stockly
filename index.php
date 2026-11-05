@@ -73,7 +73,6 @@ function formatDate($date) {
 											<h3><?php echo $stats['pending_requests']; ?></h3>
 											<p>Pending requests</p>
 										</div>
-										<div class="icon"><i class="bi bi-hourglass-split"></i></div>
 									</div>
 								</div>
 								<div class="col-md-3">
@@ -82,7 +81,6 @@ function formatDate($date) {
 											<h3><?php echo $stats['active_loans']; ?></h3>
 											<p>Active loans</p>
 										</div>
-										<div class="icon"><i class="bi bi-box-seam"></i></div>
 									</div>
 								</div>
 								<div class="col-md-3">
@@ -91,7 +89,6 @@ function formatDate($date) {
 											<h3><?php echo $stats['overdue_loans']; ?></h3>
 											<p>Overdue loans</p>
 										</div>
-										<div class="icon"><i class="bi bi-exclamation-triangle"></i></div>
 									</div>
 								</div>
 								<div class="col-md-3">
@@ -100,7 +97,6 @@ function formatDate($date) {
 											<h3><?php echo $stats['today_bookings']; ?></h3>
 											<p>Today's bookings</p>
 										</div>
-										<div class="icon"><i class="bi bi-calendar-date"></i></div>
 									</div>
 								</div>
 							<?php else: ?>
@@ -110,7 +106,6 @@ function formatDate($date) {
 											<h3><?php echo $stats['pending_requests']; ?></h3>
 											<p>Pending</p>
 										</div>
-										<div class="icon"><i class="bi bi-hourglass-split"></i></div>
 									</div>
 								</div>
 								<div class="col-md-3">
@@ -119,7 +114,6 @@ function formatDate($date) {
 											<h3><?php echo $stats['approved_requests']; ?></h3>
 											<p>Approved</p>
 										</div>
-										<div class="icon"><i class="bi bi-check-circle"></i></div>
 									</div>
 								</div>
 								<div class="col-md-3">
@@ -128,7 +122,6 @@ function formatDate($date) {
 											<h3><?php echo $stats['checked_out_requests']; ?></h3>
 											<p>Checked out</p>
 										</div>
-										<div class="icon"><i class="bi bi-box-arrow-right"></i></div>
 									</div>
 								</div>
 								<div class="col-md-3">
@@ -137,7 +130,6 @@ function formatDate($date) {
 											<h3><?php echo $stats['returned_requests']; ?></h3>
 											<p>Returned</p>
 										</div>
-										<div class="icon"><i class="bi bi-clipboard-check"></i></div>
 									</div>
 								</div>
 							<?php endif; ?>
